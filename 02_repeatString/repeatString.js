@@ -1,18 +1,26 @@
 const { text } = require("express");
 
-const repeatString = function repeat(text, count){
-    var newString="";
-    console.log("your original text is "+text);
+const repeatString = function repeat(word, count){
+    let newString="";
+    console.log("your original text is "+word);
     
-    if(text<0){
-        return ERROR;
+    if(count<0){
+        return "ERROR";
     }
-    newString = text;
-    for(var i=0; i<=count; i++);{
-        console.log("loop number"+i);
-        newString = newString.concat("",newString);
+
+    newString = "";
+    /*
+    for(let i=0; i<count; i++);{
+        console.log("loop number "+i);
+        newString += word;
+        //console.log("New string is " + newString + "loop number " + i);
     }
+    */
+    for (let i = 0; i < count; i++) {
+        newString = newString + word;
+      }
     console.log("Your new text is " + newString);
+    
     return newString;
 };
 
