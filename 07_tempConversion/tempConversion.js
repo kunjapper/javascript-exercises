@@ -1,11 +1,13 @@
 const convertToCelsius = function(tempF) {
-  var convertedF = (tempF * (9/5)+(32)).toFixed(2);
-  return convertedF;
+  var celsius = (5/9)*(tempF-32).toFixed(1);
+  celsius = Math.round(celsius*10)/10;
+  return celsius;
 };
 
 const convertToFahrenheit = function(tempC) {
-  var convertedC = ((5/9)*(tempF-32)).toFixed(2);
-  return convertedC;
+  var fahrenheit = ((9/5)*(tempC)+32).toFixed(1);
+  fahrenheit = Math.round(fahrenheit*10)/10;
+  return fahrenheit;
 };
 
 // Do not edit below this line
